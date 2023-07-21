@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.game-board{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center; 
+    gap:.5rem;
+    padding: .5rem;
+    background-color:#a69480;
+    margin: 1.5rem auto;
+    width: fit-content;
+    border-radius: 5px; 
+    
+}
+
+#noMoreMovie{
+    position: absolute;
+    opacity: 0;
+    border-radius: 5px;
+    font-size: 1.3em;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background-color: rgb(20, 20,20,0.5);
+}
+
+.game-board div{
+    display: grid;
+    place-items: center;
+    color: black;
+    font-size: 1.3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    background-color: #c0b0a1;
+}
+
+.infos{ 
+
+    display: flex;
+    justify-content: space-around;  
+    height: 3rem; 
+    gap: 0.2rem;
+
+}
+
+.infos > *{   
+    border-radius: 5px;  
+    width: 100%;
+    height:4.1rem;
+    text-align: center;
+}
+
+.infos .item1{ 
+    background-color:#edc22d;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+.infos .item2{ 
+    background-color: #3d3336;
+    COLOR:white;
+}    
+
+.infos .item3{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input{ 
+    padding: 0.2em .5em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%; 
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 1rem;
+    background-color:#f75e3e;
+    color: white;
+}
+
+.popup {
+    animation: popup 0.15s ease;  
+    margin: auto;
+}
+
+#undo{
+    width: 100%; 
+}
+
+@keyframes popup{
+    from{
+        width: 0px;
+        height: 0px;
+    }
+    to{
+        width: 2rem;
+        height: 2rem;
+    }
+}
